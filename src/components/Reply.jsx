@@ -2,9 +2,9 @@ export const Reply = ({ userImagePath, username, replyText, likeNum }) => {
   const showLike = likeNum > 0 ? "/like.svg" : "";
   const showLikeNum = likeNum > 0 ? `${likeNum} คน` : "";
   return (
-    <div className="d-flex gap-2 my-2 ps-5">
+    <div className="d-flex gap-2 my-2">
       <img
-        src={userImagePath} //  "/profileImages/puppy.jpg"
+        src={userImagePath}
         width="48"
         height="48"
         className="rounded-circle"
@@ -14,7 +14,6 @@ export const Reply = ({ userImagePath, username, replyText, likeNum }) => {
         className="rounded rounded-3 p-2"
         style={{ backgroundColor: "#E5E7EB" }}
       >
-        {/* <span className="fw-semibold">หมาน้อย</span> */}
         <span className="fw-semibold">{username}</span>
         <br />
         <span>{replyText}</span>

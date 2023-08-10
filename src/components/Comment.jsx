@@ -13,7 +13,7 @@ export const Comment = ({
   return (
     <div className="d-flex gap-2 my-2">
       <img
-        src={userImagePath} //  "/profileImages/lisa.jpg"
+        src={userImagePath}
         width="48"
         height="48"
         className="rounded-circle"
@@ -33,16 +33,17 @@ export const Comment = ({
             <span className="text-muted">{showLikeNum}</span>
           </div>
         </div>
-
-        {replies.map((rep, i) => (
-          <Reply
-            key={i}
-            userImagePath={rep.userImagePath}
-            username={rep.username}
-            replyText={rep.replyText}
-            likeNum={rep.likeNum}
-          />
-        ))}
+        <div>
+          {replies.map((rep, i) => (
+            <Reply
+              key={i}
+              userImagePath={rep.userImagePath}
+              username={rep.username}
+              replyText={rep.replyText}
+              likeNum={rep.likeNum}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
